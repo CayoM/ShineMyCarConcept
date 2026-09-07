@@ -136,8 +136,24 @@ button{ font-family: inherit; cursor:pointer; }
 }
 .site-header .container{ display:flex; align-items:center; justify-content:space-between; gap: 24px; }
 
-.brand{ display:flex; align-items:center; gap:12px; font-family: var(--font-display); font-size: 1.15rem; letter-spacing:-0.01em; font-weight:600; white-space:nowrap; }
-.brand-mark{ width:34px; height:34px; flex-shrink:0; }
+.brand{
+  display:flex; align-items:center; font-family: var(--font-display); font-size: 1.28rem;
+  letter-spacing:-0.015em; font-weight:800; white-space:nowrap;
+  background: linear-gradient(100deg, var(--c-accent-deep) 10%, var(--c-accent) 35%, var(--c-accent-soft) 50%, var(--c-accent) 65%, var(--c-accent-deep) 90%);
+  background-size: 220% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: brandShine 5s ease-in-out infinite;
+}
+.footer-brand .brand{
+  background: linear-gradient(100deg, var(--c-accent-soft) 10%, #dcf0ff 50%, var(--c-accent-soft) 90%);
+  background-size: 220% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: brandShine 5s ease-in-out infinite;
+}
+@keyframes brandShine{
+  0%, 100%{ background-position: 0% center; }
+  50%{ background-position: 100% center; }
+}
 
 .nav-links{ display:flex; align-items:center; gap: 34px; }
 .nav-links a{
